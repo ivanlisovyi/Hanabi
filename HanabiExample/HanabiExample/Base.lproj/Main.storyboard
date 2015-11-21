@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yWj-i8-Jjq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9LL-TJ-wxx">
+            <objects>
+                <navigationController storyboardIdentifier="ContentNavigationController" id="yWj-i8-Jjq" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="EZJ-9n-MLv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FhQ-tC-xuG" kind="relationship" relationship="rootViewController" id="IjQ-9q-zGx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yT-3q-wdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248" y="786"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="rIr-Ex-Lr9">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="FhQ-tC-xuG" customClass="ContentViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OIU-8Y-448"/>
+                        <viewControllerLayoutGuide type="bottom" id="kuW-5c-hqm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PqR-vo-ftA">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TNm-lX-qvo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kRx-BD-Iic" customClass="HanabiCollectionViewLayout" customModule="Example" customModuleProvider="target">
+                                    <size key="itemSize" width="594" height="211"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="standartHeight">
+                                            <real key="value" value="100"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="focusedHeight">
+                                            <real key="value" value="280"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="dragOffset">
+                                            <real key="value" value="180"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="xqW-cY-2PY" userLabel="Content Collection View Cell" customClass="ContentCollectionViewCell" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="0.0" width="594" height="211"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="594" height="211"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-pU-Tzk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="594" height="211"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hkW-pU-Tzk" secondAttribute="bottom" id="G8b-ep-Uzm"/>
+                                            <constraint firstItem="hkW-pU-Tzk" firstAttribute="top" secondItem="xqW-cY-2PY" secondAttribute="top" id="a9W-FQ-tDk"/>
+                                            <constraint firstAttribute="trailing" secondItem="hkW-pU-Tzk" secondAttribute="trailing" id="b7C-Pz-IeS"/>
+                                            <constraint firstItem="hkW-pU-Tzk" firstAttribute="leading" secondItem="xqW-cY-2PY" secondAttribute="leading" id="hG5-Al-i8p"/>
+                                        </constraints>
+                                        <size key="customSize" width="594" height="211"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="hkW-pU-Tzk" id="qGh-x7-EFD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="FhQ-tC-xuG" id="2Rz-5z-XuY"/>
+                                    <outlet property="delegate" destination="FhQ-tC-xuG" id="wZu-PI-G7d"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TNm-lX-qvo" firstAttribute="top" secondItem="OIU-8Y-448" secondAttribute="bottom" id="0fk-d4-sKT"/>
+                            <constraint firstItem="kuW-5c-hqm" firstAttribute="top" secondItem="TNm-lX-qvo" secondAttribute="bottom" id="9ho-aD-7GY"/>
+                            <constraint firstAttribute="trailing" secondItem="TNm-lX-qvo" secondAttribute="trailing" id="cz8-5X-ZVy"/>
+                            <constraint firstItem="TNm-lX-qvo" firstAttribute="leading" secondItem="PqR-vo-ftA" secondAttribute="leading" id="t36-On-Hnv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fCc-BR-lRQ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="TNm-lX-qvo" id="92N-QU-Odk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAB-IY-rzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="786"/>
+        </scene>
+    </scenes>
+</document>
