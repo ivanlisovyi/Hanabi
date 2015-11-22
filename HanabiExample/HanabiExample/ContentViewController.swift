@@ -21,7 +21,6 @@ class ContentViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
