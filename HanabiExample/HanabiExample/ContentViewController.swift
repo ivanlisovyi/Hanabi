@@ -39,7 +39,7 @@ class ContentViewController: UIViewController {
 
 extension ContentViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -51,17 +51,7 @@ extension ContentViewController: UICollectionViewDataSource {
     }
     
     func imageAtIndex(index: Int) -> UIImage? {
-        switch index {
-        case 0:
-            return UIImage(named: "harem")
-        case 1:
-            return UIImage(named: "school")
-        case 2:
-            return UIImage(named: "mecha")
-        default: break
-        }
-        
-        return nil
+        return UIImage(named: String(index))
     }
 }
 
