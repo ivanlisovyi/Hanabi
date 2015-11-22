@@ -26,7 +26,7 @@
         <!--Content View Controller-->
         <scene sceneID="rIr-Ex-Lr9">
             <objects>
-                <viewController storyboardIdentifier="ContentViewController" id="FhQ-tC-xuG" customClass="ContentViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewController" id="FhQ-tC-xuG" customClass="ContentViewController" customModule="HanabiExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OIU-8Y-448"/>
                         <viewControllerLayoutGuide type="bottom" id="kuW-5c-hqm"/>
@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kRx-BD-Iic" customClass="HanabiCollectionViewLayout" customModule="Example" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kRx-BD-Iic" customClass="HanabiCollectionViewLayout" customModule="HanabiExample" customModuleProvider="target">
                                     <size key="itemSize" width="594" height="211"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -57,7 +57,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="xqW-cY-2PY" userLabel="Content Collection View Cell" customClass="ContentCollectionViewCell" customModule="Example" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="xqW-cY-2PY" userLabel="Content Collection View Cell" customClass="ContentCollectionViewCell" customModule="HanabiExample" customModuleProvider="target">
                                         <rect key="frame" x="3" y="0.0" width="594" height="211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

@@ -54,9 +54,3 @@ extension ContentViewController: UICollectionViewDataSource {
         return UIImage(named: String(index))
     }
 }
-
-extension ContentViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
-    }
-}
