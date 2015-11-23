@@ -6,6 +6,12 @@ Hanabi
 ## Overview
 Hanabi is a UICollectionViewLayout subclass with a focus on UICollectionViewCell content.
 
+<p align="center" >
+
+	<img src="./Screenshots/Example.gif" alt="Hanabi" title="Hanabi">
+
+</p>
+
 ## Usage
 
 Hanabi contains three public properties that help to customize its behavior.
