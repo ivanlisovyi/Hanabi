@@ -26,11 +26,11 @@ class ContentViewController: UIViewController {
     }
 
     private func setupNavigationBar() {
-        let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        let label = UILabel(frame: CGRectMake(0, 0, 200, 30))
         label.font = UIFont.systemFontOfSize(21)
         label.textColor = UIColor.darkGrayColor()
         label.textAlignment = .Center
-        label.text = "Genres"
+        label.text = "Manga Genres"
         
         navigationItem.titleView = label
     }
@@ -38,7 +38,7 @@ class ContentViewController: UIViewController {
 
 extension ContentViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 9
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
