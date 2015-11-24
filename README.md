@@ -2,6 +2,7 @@ Hanabi
 =======
 
 [![Swift 2.0](https://img.shields.io/badge/Swift-2.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Build Status](https://travis-ci.org/kshin/Hanabi.svg?branch=master)](https://travis-ci.org/kshin/Hanabi)
 
 ## Overview
 Hanabi is a UICollectionViewLayout subclass with a focus on UICollectionViewCell content.
