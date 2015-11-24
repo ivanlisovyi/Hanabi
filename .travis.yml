@@ -6,5 +6,5 @@ install:
 - gem install cocoapods xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- set -o pipefail && xcodebuild -project HanabiExample/HanabiExample.xcodeproj -scheme Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-- pod lib lint Hanabi.podspec --quick
+- set -o pipefail && xcodebuild -project HanabiExample/HanabiExample.xcodeproj -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+- pod lib lint HanabiCollectionViewLayout.podspec --quick
