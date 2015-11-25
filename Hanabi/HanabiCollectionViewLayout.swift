@@ -8,16 +8,16 @@
 
 import UIKit
 
-@IBDesignable class HanabiCollectionViewLayout: UICollectionViewLayout {
-    @IBInspectable var standartHeight: CGFloat = 100.0
-    @IBInspectable var focusedHeight: CGFloat = 280.0
-    @IBInspectable var dragOffset: CGFloat = 180.0
+@IBDesignable public class HanabiCollectionViewLayout: UICollectionViewLayout {
+    @IBInspectable public var standartHeight: CGFloat = 100.0
+    @IBInspectable public var focusedHeight: CGFloat = 280.0
+    @IBInspectable public var dragOffset: CGFloat = 180.0
     
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
     
     // MARK: UICollectionViewLayout methods
 
-    override func collectionViewContentSize() -> CGSize {
+    override public func collectionViewContentSize() -> CGSize {
         guard let collectionView = collectionView else {
             return super.collectionViewContentSize()
         }
@@ -28,18 +28,18 @@ import UIKit
         return CGSize(width: collectionView.frame.width, height: contentHeight)
     }
     
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override public func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
         return true
     }
     
-    override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override public func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         let proposedItemIndex = roundf(Float(proposedContentOffset.y / dragOffset))
         let nearestPageOffset = CGFloat(proposedItemIndex) * dragOffset
         
         return CGPoint(x: 0.0, y: nearestPageOffset)
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
         for attributes in cachedLayoutAttributes {
@@ -51,7 +51,7 @@ import UIKit
         return layoutAttributes
     }
     
-    override func prepareLayout() {
+    override public func prepareLayout() {
         guard let collectionView = collectionView else {
             return
         }
@@ -95,7 +95,7 @@ import UIKit
         cachedLayoutAttributes = cache
     }
     
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         return cachedLayoutAttributes[indexPath.item]
     }
     
