@@ -1,6 +1,6 @@
 //
 //  HanabiCollectionViewLayout.swift
-//  Hanabi
+//  HanabiCollectionViewLayout
 //
 //  Created by Ivan Lisovyi on 21/11/2015.
 //  Copyright © 2015 Ivan Lisovyi. All rights reserved.

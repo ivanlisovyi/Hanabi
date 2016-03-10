@@ -13,18 +13,18 @@
 		FA096B881C00FD19000A6016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA096B801C00FD19000A6016 /* Main.storyboard */; };
 		FA096B891C00FD19000A6016 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA096B821C00FD19000A6016 /* ContentCollectionViewCell.swift */; };
 		FA096B8A1C00FD19000A6016 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA096B831C00FD19000A6016 /* ContentViewController.swift */; };
-		FA57951F1C91910800C01B55 /* HanabiCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */; };
-		FA5795201C91910800C01B55 /* HanabiCollectionViewLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA9E7B961C91923F00680209 /* HanabiCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */; };
+		FA9E7B971C91923F00680209 /* HanabiCollectionViewLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FA57951D1C9190BD00C01B55 /* Embed Frameworks */ = {
+		FA9E7B981C91923F00680209 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA5795201C91910800C01B55 /* HanabiCollectionViewLayout.framework in Embed Frameworks */,
+				FA9E7B971C91923F00680209 /* HanabiCollectionViewLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FA096B501C008E28000A6016 /* HanabiExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanabiExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA096B501C008E28000A6016 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA096B7C1C00FD19000A6016 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA096B7D1C00FD19000A6016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA096B7F1C00FD19000A6016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA57951F1C91910800C01B55 /* HanabiCollectionViewLayout.framework in Frameworks */,
+				FA9E7B961C91923F00680209 /* HanabiCollectionViewLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 		FA096B511C008E28000A6016 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA096B501C008E28000A6016 /* HanabiExample.app */,
+				FA096B501C008E28000A6016 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,22 +97,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA096B4F1C008E28000A6016 /* HanabiExample */ = {
+		FA096B4F1C008E28000A6016 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA096B6D1C008E28000A6016 /* Build configuration list for PBXNativeTarget "HanabiExample" */;
+			buildConfigurationList = FA096B6D1C008E28000A6016 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				FA096B4C1C008E28000A6016 /* Sources */,
 				FA096B4D1C008E28000A6016 /* Frameworks */,
 				FA096B4E1C008E28000A6016 /* Resources */,
-				FA57951D1C9190BD00C01B55 /* Embed Frameworks */,
+				FA9E7B981C91923F00680209 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HanabiExample;
+			name = Example;
 			productName = Example;
-			productReference = FA096B501C008E28000A6016 /* HanabiExample.app */;
+			productReference = FA096B501C008E28000A6016 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +130,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA096B4B1C008E28000A6016 /* Build configuration list for PBXProject "HanabiExample" */;
+			buildConfigurationList = FA096B4B1C008E28000A6016 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA096B4F1C008E28000A6016 /* HanabiExample */,
+				FA096B4F1C008E28000A6016 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 				INFOPLIST_FILE = HanabiExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kshin.HanabiExample;
-				PRODUCT_NAME = HanabiExample;
+				PRODUCT_NAME = Example;
 			};
 			name = Debug;
 		};
@@ -295,14 +295,14 @@
 				INFOPLIST_FILE = HanabiExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kshin.HanabiExample;
-				PRODUCT_NAME = HanabiExample;
+				PRODUCT_NAME = Example;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA096B4B1C008E28000A6016 /* Build configuration list for PBXProject "HanabiExample" */ = {
+		FA096B4B1C008E28000A6016 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA096B6B1C008E28000A6016 /* Debug */,
@@ -311,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA096B6D1C008E28000A6016 /* Build configuration list for PBXNativeTarget "HanabiExample" */ = {
+		FA096B6D1C008E28000A6016 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA096B6E1C008E28000A6016 /* Debug */,
