@@ -15,7 +15,7 @@ import UIKit
     
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
     
-    // MARK: UICollectionViewLayout methods
+    // MARK: UICollectionViewLayout
 
     override public func collectionViewContentSize() -> CGSize {
         guard let collectionView = collectionView else {
@@ -40,15 +40,9 @@ import UIKit
     }
     
     override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        var layoutAttributes = [UICollectionViewLayoutAttributes]()
-        
-        for attributes in cachedLayoutAttributes {
-            if CGRectIntersectsRect(attributes.frame, rect) {
-                layoutAttributes.append(attributes)
-            }
+        return cachedLayoutAttributes.filter { attributes in
+            return CGRectIntersectsRect(attributes.frame, rect)
         }
-        
-        return layoutAttributes
     }
     
     override public func prepareLayout() {
@@ -56,7 +50,7 @@ import UIKit
             return
         }
         
-        var cache = [UICollectionViewLayoutAttributes]()
+        cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
         
         let itemsCount = collectionView.numberOfItemsInSection(0)
         var frame = CGRectZero
@@ -87,12 +81,10 @@ import UIKit
             attributes.zIndex = item
             attributes.frame = frame
             
-            cache.append(attributes)
+            cachedLayoutAttributes.append(attributes)
             
             y = CGRectGetMaxY(frame)
         }
-        
-        cachedLayoutAttributes = cache
     }
     
     override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
