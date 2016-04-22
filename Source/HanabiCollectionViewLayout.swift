@@ -12,9 +12,9 @@ import UIKit
     @IBInspectable public var standartHeight: CGFloat = 100.0
     @IBInspectable public var focusedHeight: CGFloat = 280.0
     @IBInspectable public var dragOffset: CGFloat = 180.0
-    
+
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
-    
+
     // MARK: UICollectionViewLayout
 
     override public func collectionViewContentSize() -> CGSize {
@@ -103,7 +103,7 @@ import UIKit
     
     private func nextItemPercentageOffset(forFocusedItemIndex index: Int) -> CGFloat {
         guard let collectionView = collectionView else {
-            return 0;
+            return 0
         }
         
         return (collectionView.contentOffset.y / dragOffset) - CGFloat(index)

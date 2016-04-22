@@ -1,0 +1,6 @@
+include:
+    - Source
+exclude:
+    - '**Tests.swift'
+except:
+    - trailing-whitespace
