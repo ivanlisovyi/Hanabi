@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA9E7B931C91922600680209 /* HanabiCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9E7B901C91922600680209 /* HanabiCollectionViewLayout.h */; };
+		FA9E7B931C91922600680209 /* HanabiCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9E7B901C91922600680209 /* HanabiCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA9E7B941C91922600680209 /* HanabiCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E7B911C91922600680209 /* HanabiCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -177,7 +177,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -219,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

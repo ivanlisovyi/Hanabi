@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HanabiCollectionViewLayout"
-  s.version      = "1.1"
+  s.version      = "1.1.1"
   s.summary      = "UICollectionView subclass with focus on the content"
   s.homepage     = "https://github.com/kshin/Hanabi"
   s.license      = { :type => "MIT", :file => "LICENSE" }
