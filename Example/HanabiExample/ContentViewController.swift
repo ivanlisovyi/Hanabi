@@ -9,6 +9,8 @@
 import UIKit
 
 class ContentViewController: UICollectionViewController {
+    fileprivate let cellIdentifier = "cellIdentifier"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -16,26 +18,21 @@ class ContentViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
 }
 
 extension ContentViewController {
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cellIdentifier = "cellIdentifier"
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! ContentCollectionViewCell
-        cell.imageView?.image = imageAtIndex(indexPath.row)
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath as IndexPath) as! ContentCollectionViewCell
+        cell.imageView?.image = imageAtIndex(index: indexPath.row)
         
         return cell
     }
     
-    func imageAtIndex(index: Int) -> UIImage? {
+    private func imageAtIndex(index: Int) -> UIImage? {
         return UIImage(named: String(index))
     }
 }

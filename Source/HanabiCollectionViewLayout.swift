@@ -8,65 +8,65 @@
 
 import UIKit
 
-@IBDesignable public class HanabiCollectionViewLayout: UICollectionViewLayout {
-    @IBInspectable public var standartHeight: CGFloat = 100.0
-    @IBInspectable public var focusedHeight: CGFloat = 280.0
-    @IBInspectable public var dragOffset: CGFloat = 180.0
+@IBDesignable open class HanabiCollectionViewLayout: UICollectionViewLayout {
+    @IBInspectable open var standartHeight: CGFloat = 100.0
+    @IBInspectable open var focusedHeight: CGFloat = 280.0
+    @IBInspectable open var dragOffset: CGFloat = 180.0
 
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
 
     // MARK: UICollectionViewLayout
 
-    override public func collectionViewContentSize() -> CGSize {
+    override open var collectionViewContentSize : CGSize {
         guard let collectionView = collectionView else {
-            return super.collectionViewContentSize()
+            return super.collectionViewContentSize
         }
         
-        let itemsCount = collectionView.numberOfItemsInSection(0)
+        let itemsCount = collectionView.numberOfItems(inSection: 0)
         let contentHeight = CGFloat(itemsCount) * dragOffset + (collectionView.frame.height - dragOffset)
         
         return CGSize(width: collectionView.frame.width, height: contentHeight)
     }
     
-    override public func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
-    override public func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+    override open func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         let proposedItemIndex = roundf(Float(proposedContentOffset.y / dragOffset))
         let nearestPageOffset = CGFloat(proposedItemIndex) * dragOffset
         
         return CGPoint(x: 0.0, y: nearestPageOffset)
     }
     
-    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override open func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return cachedLayoutAttributes.filter { attributes in
-            return CGRectIntersectsRect(attributes.frame, rect)
+            return attributes.frame.intersects(rect)
         }
     }
     
-    override public func prepareLayout() {
+    override open func prepare() {
         guard let collectionView = collectionView else {
             return
         }
         
         cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
         
-        let itemsCount = collectionView.numberOfItemsInSection(0)
-        var frame = CGRectZero
+        let itemsCount = collectionView.numberOfItems(inSection: 0)
+        var frame = CGRect.zero
         var y: CGFloat = 0.0
         
         for item in 0..<itemsCount {
-            let indexPath = NSIndexPath(forItem: item, inSection: 0)
+            let indexPath = IndexPath(item: item, section: 0)
             
             var height = standartHeight
             let currentFocusedIndex = currentFocusedItemIndex()
             let nextItemOffset = nextItemPercentageOffset(forFocusedItemIndex: currentFocusedIndex)
             
-            if indexPath.item == currentFocusedIndex {
+            if (indexPath as NSIndexPath).item == currentFocusedIndex {
                 y = collectionView.contentOffset.y - standartHeight * nextItemOffset
                 height = focusedHeight
-            } else if indexPath.item == (currentFocusedIndex + 1) && indexPath.item != itemsCount {
+            } else if (indexPath as NSIndexPath).item == (currentFocusedIndex + 1) && (indexPath as NSIndexPath).item != itemsCount {
                 height = standartHeight + max((focusedHeight - standartHeight) * nextItemOffset, 0)
                 
                 let maxYOffset = y + standartHeight
@@ -77,18 +77,18 @@ import UIKit
             
             frame = CGRect(x: 0, y: y, width: collectionView.frame.width, height: height)
             
-            let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
+            let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.zIndex = item
             attributes.frame = frame
             
             cachedLayoutAttributes.append(attributes)
             
-            y = CGRectGetMaxY(frame)
+            y = frame.maxY
         }
     }
     
-    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        return cachedLayoutAttributes[indexPath.item]
+    override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        return cachedLayoutAttributes[(indexPath as NSIndexPath).item]
     }
     
     // MARK: Private methods

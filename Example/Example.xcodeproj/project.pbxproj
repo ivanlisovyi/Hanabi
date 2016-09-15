@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4ABE6B1D8A920500882892 /* HanabiCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4ABE6A1D8A920500882892 /* HanabiCollectionViewLayout.framework */; };
 		FA096B851C00FD19000A6016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA096B7C1C00FD19000A6016 /* AppDelegate.swift */; };
 		FA096B861C00FD19000A6016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA096B7D1C00FD19000A6016 /* Assets.xcassets */; };
 		FA096B871C00FD19000A6016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA096B7E1C00FD19000A6016 /* LaunchScreen.storyboard */; };
 		FA096B881C00FD19000A6016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA096B801C00FD19000A6016 /* Main.storyboard */; };
 		FA096B891C00FD19000A6016 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA096B821C00FD19000A6016 /* ContentCollectionViewCell.swift */; };
 		FA096B8A1C00FD19000A6016 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA096B831C00FD19000A6016 /* ContentViewController.swift */; };
-		FA9E7B961C91923F00680209 /* HanabiCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */; };
-		FA9E7B971C91923F00680209 /* HanabiCollectionViewLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA9E7B971C91923F00680209 /* HanabiCollectionViewLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E4ABE6A1D8A920500882892 /* HanabiCollectionViewLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HanabiCollectionViewLayout.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/HanabiCollectionViewLayout-cwexxzqkxnrfpcciqfskrxdmswuw/Build/Products/Debug-iphonesimulator/HanabiCollectionViewLayout.framework"; sourceTree = "<group>"; };
 		FA096B501C008E28000A6016 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA096B7C1C00FD19000A6016 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA096B7D1C00FD19000A6016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +39,6 @@
 		FA096B821C00FD19000A6016 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA096B831C00FD19000A6016 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		FA096B841C00FD19000A6016 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = HanabiCollectionViewLayout.framework; path = "/Users/knshin/Dropbox/Development/Pet projects/Swift/Hanabi/Build/Products/Debug-iphoneos/HanabiCollectionViewLayout.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9E7B961C91923F00680209 /* HanabiCollectionViewLayout.framework in Frameworks */,
+				4E4ABE6B1D8A920500882892 /* HanabiCollectionViewLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +87,7 @@
 		FA5795211C91911600C01B55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA57951E1C91910800C01B55 /* HanabiCollectionViewLayout.framework */,
+				4E4ABE6A1D8A920500882892 /* HanabiCollectionViewLayout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,11 +120,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Ivan Lisovyi";
 				TargetAttributes = {
 					FA096B4F1C008E28000A6016 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = X4N3ZZ768M;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -207,8 +207,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -252,8 +254,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -272,6 +276,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -281,10 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X4N3ZZ768M;
 				INFOPLIST_FILE = HanabiExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kshin.HanabiExample;
 				PRODUCT_NAME = Example;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -292,10 +299,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X4N3ZZ768M;
 				INFOPLIST_FILE = HanabiExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kshin.HanabiExample;
 				PRODUCT_NAME = Example;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
