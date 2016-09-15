@@ -1,3 +1,6 @@
+## 1.2
+Updated to Swift 3.0
+
 ## 1.0.1
 
 Changed access attribute of the class and some of its methods to public
