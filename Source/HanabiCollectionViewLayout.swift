@@ -15,7 +15,7 @@ import UIKit
 
     private var cachedLayoutAttributes = [UICollectionViewLayoutAttributes]()
 
-    // MARK: UICollectionViewLayout
+    // MARK: - UICollectionViewLayout
 
     override open var collectionViewContentSize : CGSize {
         guard let collectionView = collectionView else {
@@ -91,7 +91,7 @@ import UIKit
         return cachedLayoutAttributes[(indexPath as NSIndexPath).item]
     }
     
-    // MARK: Private methods
+    // MARK: - Private methods
     
     private func currentFocusedItemIndex() -> Int {
         guard let collectionView = collectionView else {
