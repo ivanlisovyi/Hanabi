@@ -1,7 +1,7 @@
 Hanabi
 =======
 
-[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg)](https://developer.apple.com/swift/)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://developer.apple.com/swift/)
 [![Build Status](https://travis-ci.org/kshin/Hanabi.svg?branch=master)](https://travis-ci.org/kshin/Hanabi)
 [![Code Climate](https://codeclimate.com/github/kshin/Hanabi/badges/gpa.svg)](https://codeclimate.com/github/kshin/Hanabi)
 
